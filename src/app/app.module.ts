@@ -14,13 +14,15 @@ import { PostsComponent } from './modules/posts/pages/posts/posts.component';
 import { UsersComponent } from './modules/users/pages/users/users.component';
 import { NotFoundComponent} from './modules/not-found/not-found.component';
 
+
+// Refactor-> Routes on selfModule
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: MainComponent },
   { path: 'posts', component: PostsComponent },
   { path: 'users', component: UsersComponent }, 
   { path: '404', component: NotFoundComponent},
-  { path: '**', redirectTo: '/404'}
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({
