@@ -13,6 +13,7 @@ import { MainComponent } from './modules/main/pages/main.component';
 import { PostsComponent } from './modules/posts/pages/posts/posts.component';
 import { PostComponent } from './modules/posts/components/post/post.component';
 import { UsersComponent } from './modules/users/pages/users/users.component';
+import { UserComponent } from './modules/users/components/user/user.component';
 import { NewUserComponent } from './modules/users/pages/new-user/new-user.component';
 import { NotFoundComponent} from './modules/not-found/not-found.component';
 
@@ -35,6 +36,7 @@ const routes: Routes = [
     HeaderComponent,
     MainComponent,
     PostsComponent,
+    UserComponent,
     UsersComponent,
     NewUserComponent,
     NotFoundComponent,

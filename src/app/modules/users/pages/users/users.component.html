@@ -3,6 +3,9 @@
   <button routerLink="new" mat-raised-button color="primary">
     Add new User
   </button>
-
-  <!-- show users -->
+  <ul *ngFor="let user of users">
+    <li>
+      <user [user]='user'></user>
+    </li>
+  </ul> 
 </div>
