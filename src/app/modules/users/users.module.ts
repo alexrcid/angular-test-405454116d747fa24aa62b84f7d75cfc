@@ -20,4 +20,3 @@ import { UsersComponent } from './pages/users/users.component';
   ]
 })
 export class UsersModule {}
-
