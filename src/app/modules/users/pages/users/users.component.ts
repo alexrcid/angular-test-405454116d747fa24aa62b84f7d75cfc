@@ -15,7 +15,9 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getUsers().subscribe((data: {}[]) => {
-      this.users = data;
+      const sortUsers = data.sort((a: any, b: any) =>
+      a.username.localeCompare(b.username));
+      this.users = sortUsers;
     });
   }
 }
