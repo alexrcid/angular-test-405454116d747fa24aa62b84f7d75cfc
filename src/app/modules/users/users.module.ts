@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { UsersService } from './services/users.service';
 
 // Components
 import { UserComponent } from './components/user/user.component';
@@ -14,7 +15,9 @@ import { UsersComponent } from './pages/users/users.component';
     NewUserComponent
   ],
   imports: [],
-  providers: []
+  providers: [
+    UsersService
+  ]
 })
 export class UsersModule {}
 
