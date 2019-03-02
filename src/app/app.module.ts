@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './modules/main/pages/main.component';
 import { PostsComponent } from './modules/posts/pages/posts/posts.component';
+import { PostComponent } from './modules/posts/components/post/post.component';
 import { UsersComponent } from './modules/users/pages/users/users.component';
 import { NewUserComponent } from './modules/users/pages/new-user/new-user.component';
 import { NotFoundComponent} from './modules/not-found/not-found.component';
@@ -37,9 +38,15 @@ const routes: Routes = [
     PostsComponent,
     UsersComponent,
     NewUserComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PostComponent
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
