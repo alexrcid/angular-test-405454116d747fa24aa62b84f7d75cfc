@@ -14,4 +14,12 @@ export class UsersService {
   getUsers(): any {
     return this.http.get<InterfaceUser>(this.apiURL);
   }
+
+  newUser(user: {}): void {
+    this.http.post(this.apiURL, user)
+    .subscribe((response: {}) => {
+      console.log(response);
+      alert("The user " + response.username +  " it's created")
+    });
+  }
 }

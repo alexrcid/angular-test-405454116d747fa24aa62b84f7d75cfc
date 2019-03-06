@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'new-user',
@@ -15,13 +16,16 @@ export class NewUserComponent {
       street: '',
       city: ''
     },
-    zipCode: Number,
-    phone: Number,
+    zipCode: '',
+    phone: '',
     website: ''
   };
 
+  constructor(private service: UsersService) {  }
+
   submitForm(user: {}): void {
-    
+    this.service.newUser(this.newUser);
   }
 
 }
+
