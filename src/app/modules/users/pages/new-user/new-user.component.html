@@ -3,15 +3,15 @@
 
   <form (ngSubmit)="submitForm(userForm)" #userForm="ngForm" novalidate>
     <div class="new-user__form-field">
-      <label> *Name <input type="text" name="name" [(ngModel)]="newUser.name" required></label>
+      <label> *Name <input type="text" name="ngModel" [(ngModel)]="newUser.name" required /></label>
     </div>
 
     <div class="new-user__form-field">
-      <label> *Username <input type="text" name="username" [(ngModel)]="newUser.username" required></label>
+      <label> *Username <input type="text" name="username" [(ngModel)]="newUser.username" required pattern="[^ @ ' ' # ]+" /></label>
     </div>
 
     <div class="new-user__form-field">
-      <label> *Email <input type="email" name="email" [(ngModel)]="newUser.email" required></label>
+      <label> *Email <input type="email" name="email" [(ngModel)]="newUser.email" required [email]="true" /></label>
     </div>
 
     <div>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="new-user__form-field">
-      <label>*Phone <input type="tel" name="phone" [(ngModel)]="newUser.phone" required></label>
+      <label>*Phone <input type="tel" name="phone" [(ngModel)]="newUser.phone" required pattern="^(0|[1-9][0-9]*)$" minlength="9" maxlength="9" /></label>
     </div>
 
     <div class="new-user__form-field">

@@ -8,7 +8,7 @@ import { UsersService } from '../../services/users.service';
 })
 
 export class NewUserComponent {
-  newUser: {} = {
+  newUser = {
     name: '',
     username: '',
     email: '',
@@ -23,9 +23,13 @@ export class NewUserComponent {
 
   constructor(private service: UsersService) {  }
 
-  submitForm(user: {}): void {
-    this.service.newUser(this.newUser);
+
+    submitForm(user: any): void {
+      if (user.control.status === 'VALID') {
+        this.service.newUser(this.newUser);
+      } else {
+        console.log(user);
+        alert('Please fill correctly all labels')
+      }
+    }
   }
-
-}
-
