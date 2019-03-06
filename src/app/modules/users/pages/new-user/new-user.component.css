@@ -1,0 +1,26 @@
+.new-user {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.new-user__form-field {
+  margin-bottom: 1em;
+  display: block;
+}
+
+.new-user__form-field label, .new-user__form-field input {
+  display: block;
+}
+
+.new-user__form-field .ng-touched {
+  border-color: blue;
+}
+
+.new-user__form-field .ng-touched.ng-valid {
+  border-color: green;
+}
+
+.new-user__form-field .ng-touched.ng-invalid {
+  border-color: red;
+}

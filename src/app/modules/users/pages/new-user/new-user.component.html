@@ -1,41 +1,41 @@
 <div class="new-user">
   <h2>New User</h2>
 
-  <form>
+  <form (ngSubmit)="submitForm(userForm)" #userForm="ngForm" novalidate>
     <div class="new-user__form-field">
-      <label> *Name <input type="text" /> </label>
+      <label> *Name <input type="text" name="name" [(ngModel)]="newUser.name" required></label>
     </div>
 
     <div class="new-user__form-field">
-      <label> *Username <input type="text" /> </label>
+      <label> *Username <input type="text" name="username" [(ngModel)]="newUser.username" required></label>
     </div>
 
     <div class="new-user__form-field">
-      <label> *Email <input type="text" /> </label>
+      <label> *Email <input type="email" name="email" [(ngModel)]="newUser.email" required></label>
     </div>
 
     <div>
       <h3>Address</h3>
 
       <div class="new-user__form-field">
-        <label>Street <input type="text" /> </label>
+        <label>Street <input type="text" name="street" [(ngModel)]="newUser.adress.street"></label>
       </div>
 
       <div class="new-user__form-field">
-        <label>City <input type="text" /> </label>
+        <label>City <input type="text" name="city" [(ngModel)]="newUser.adress.city"></label>
       </div>
 
       <div class="new-user__form-field">
-        <label> Zip Code <input type="text" /> </label>
+        <label> Zip Code <input type="number" name="zipCode" [(ngModel)]="newUser.zipCode"></label>
       </div>
     </div>
 
     <div class="new-user__form-field">
-      <label>* Phone <input type="text" /> </label>
+      <label>*Phone <input type="tel" name="phone" [(ngModel)]="newUser.phone" required></label>
     </div>
 
     <div class="new-user__form-field">
-      <label>Website <input type="text" /> </label>
+      <label>Website <input type="url" name="website" [(ngModel)]="newUser.website"></label>
     </div>
 
     <button mat-raised-button color="primary" type="submit">Save</button>
