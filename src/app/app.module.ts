@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { PostsService } from './modules/posts/services/posts.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -51,7 +50,7 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule
   ],
-  providers: [ PostsService ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
