@@ -2,10 +2,11 @@
   <h2><b>Posts</b></h2>
   <p>Show Post</p>
   <p>Total Posts: {{totalPosts}}</p>
-  <ul *ngFor="let post of posts; index as i">
+  <ul *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: p }; index as i ">
     <li>
       <p>Nº post: {{i+1}}</p>
       <post [post]='post'></post>
     </li>
   </ul>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
