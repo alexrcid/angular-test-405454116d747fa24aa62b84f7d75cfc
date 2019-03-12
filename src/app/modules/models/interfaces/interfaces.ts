@@ -28,3 +28,11 @@ export interface InterfacePost {
     title: string;
     body: string;
 }
+
+export interface InterfaceComment {
+    postId: Number;
+    id: Number;
+    name: string;
+    email: string;
+    body: string;
+}

@@ -1,10 +1,12 @@
 <div class="users">
-  <button (click)="sortUsers()">Filter by Username!</button>
+  <button (click)="sortUsers()" class="button__users--sort">Filter by Username!</button>
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching for a user">
+  <br>
   <h2><b>Users</b></h2>
-  <button routerLink="new" mat-raised-button color="primary">
+  <button routerLink="new" mat-raised-button color="primary" class="button__users--new">
     Add new User
   </button>
-  <ul *ngFor="let user of users">
+  <ul *ngFor="let user of users | filter:searchText ">
     <li>
       <user [user]='user'></user>
     </li>

@@ -15,7 +15,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [PostsComponent, PostComponent],
+  declarations: [
+    PostsComponent, 
+    PostComponent
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
