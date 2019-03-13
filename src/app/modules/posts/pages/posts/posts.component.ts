@@ -20,7 +20,7 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this.postService.getPosts().subscribe((data: {}[]) => {
       this.posts = data;
-      this.totalPosts = this.posts.length-1;
+      this.totalPosts = this.posts.length;
     });
     // this.commentsService.getComments().subscribe((data: {}[]) => {
     //   console.log(data)
