@@ -2,6 +2,9 @@
     text-align: center;
 }
 .title-not-found {
-    align-content: center;
-    color: red;
+    background: linear-gradient(to right, red, orange 70%);
+    text-align: center; 
+    text-transform: uppercase;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

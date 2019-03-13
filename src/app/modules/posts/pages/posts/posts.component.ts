@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService, CommentsService } from '../../services/posts.service';
+import { PostsService } from '../../services/posts.service';
 
 
 @Component({
@@ -12,18 +12,12 @@ export class PostsComponent implements OnInit {
   posts: {}[] = [];
   totalPosts = 0;
 
-  constructor(
-    private postService: PostsService,
-    // private commentsService: CommentsService 
-  ) {  }
+  constructor(private postService: PostsService) {  }
 
   ngOnInit(): void {
     this.postService.getPosts().subscribe((data: {}[]) => {
       this.posts = data;
       this.totalPosts = this.posts.length;
     });
-    // this.commentsService.getComments().subscribe((data: {}[]) => {
-    //   console.log(data)
-    // });
   }
 }
