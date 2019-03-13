@@ -39,3 +39,11 @@ button {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+.li__card--user{
+  border: 1px solid rgb(90, 187, 243);
+  border-radius: 0.25rem;
+  display: grid;
+  padding: 1.5%;
+  background-color: #f9ffff;
+}

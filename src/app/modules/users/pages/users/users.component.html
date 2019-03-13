@@ -7,7 +7,7 @@
     Add new User
   </button>
   <ul *ngFor="let user of users | filter:searchText | paginate: { itemsPerPage: 7, currentPage: p }; ">
-    <li>
+    <li class="li__card--user">
       <user [user]='user'></user>
     </li>
   </ul> 

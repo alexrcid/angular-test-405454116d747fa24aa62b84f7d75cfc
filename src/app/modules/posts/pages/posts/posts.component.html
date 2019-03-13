@@ -1,10 +1,9 @@
 <div class="posts">
   <h2><b>Posts</b></h2>
-  <p>Show Post</p>
-  <p>Total Posts: {{totalPosts}}</p>
-  <ul *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: p }; index as i ">
-    <li>
-      <p>Nº post: {{i+1}}</p>
+  <h4>Show Post</h4>
+  <h6>Total Posts: {{totalPosts}}</h6>
+  <ul *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: p }">
+    <li class="li__card--post">
       <post [post]='post'></post>
     </li>
   </ul>
