@@ -1,6 +1,6 @@
 <div class="users">
   <button (click)="sortUsers()" class="button__users--sort">Filter by Username!</button>
-  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching for a user">
+  <input class="input__filter--users" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching for a user">
   <br>
   <h2><b>Users</b></h2>
   <button routerLink="new" mat-raised-button color="primary" class="button__users--new">

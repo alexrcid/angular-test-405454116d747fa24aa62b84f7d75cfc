@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-test';
-  welcome = 'Welcome to angular-test!';
+  welcome = 'Welcome to ' + this.title + '!';
 }
