@@ -6,9 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {NgxPaginationModule} from 'ngx-pagination';
 
-// Services
-import { UsersService } from './services/users.service';
-
 // Components
 import { UserComponent } from './components/user/user.component';
 import { NewUserComponent } from './pages/new-user/new-user.component';
@@ -33,6 +30,6 @@ const routes: Routes = [
     Ng2SearchPipeModule,
     NgxPaginationModule
   ],
-  providers: [UsersService]
+  providers: []
 })
 export class UsersModule {}
